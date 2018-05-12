@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+</head>
+<body>
+
+<p> My Name is: Krishna Chinya </p>
+<p> My ID is:1001444149 </p>
+<br>
+<p>Total Number enteries in Table is: {{ Totalcount }}</p>
+
+
+
+<p> Enter cityname </p>
+<form method="GET" action="/cityname" enctype = "multipart/form-data">
+    City Name:<input type="text" name="city">
+    <input type="submit">
+</form>
+
+
+<p> Enter latitude range and Age Range</p>
+<form method="post" action="/latitude" enctype = "multipart/form-data">
+    Latitude From:<input type="text" name="latfrom">
+    Latitude To:<input type="text" name="latto">
+    Age From:<input type="text" name="agefrom">
+    Age To:<input type="text" name="ageto">
+    <input type="submit">
+</form>
+
+
+<p> Enter latitude range and Age Range(limit 1000)</p>
+<form method="post" action="/latitudetime" enctype = "multipart/form-data">
+    Latitude From:<input type="text" name="latfrom">
+    Latitude To:<input type="text" name="latto">
+    Age From:<input type="text" name="agefrom">
+    Age To:<input type="text" name="ageto">
+    <input type="submit">
+</form>
+<br>
+
+
+<p> Enter state </p>
+<form method="post" action="/memcache" enctype = "multipart/form-data">
+    Latitude From:<input type="text" name="latfrom">
+    Latitude To:<input type="text" name="latto">
+    Age From:<input type="text" name="agefrom">
+    Age To:<input type="text" name="ageto">
+    With MemCache:
+    <input type="radio" name="one" value="1"> YES </input>
+    <input type="radio" name="one" value="2"> NO </input>
+    <input type="submit">
+</form>
+
+
+<form action="/flush_all"  method="POST" enctype="multipart/form-data">
+    <input type="submit" value="FLUSH ALL">
+</form>
+
+</body>
+</html>

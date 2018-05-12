@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>details2</title>
+</head>
+<body>
+
+<p> Time Taken is {{ timetaken }}</p>
+
+<p> Printing all the rows {{ count }} </p>
+<table border="1">
+    <tr>
+    <td>givenname</td>
+    <td>city</td>
+    <td>state</td>
+    <td>age</td>
+    <td>latitude</td>
+    <td>longitude</td>
+
+
+    {% for key, value in result.iteritems() %}
+    {% if key%6 == 0 %}
+    <tr>
+    {% endif %}
+        <td>{{ value }}</td>
+    {% endfor %}
+</table>
+
+</body>
+</html>

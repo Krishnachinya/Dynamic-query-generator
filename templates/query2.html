@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download and List Files</title>
+</head>
+<body>
+
+<p> Printing all the rows </p>
+<table border="1">
+    <tr>
+    <td>Universites</td>
+
+    {% for key, value in result.iteritems() %}
+    {% if key%1 == 0 %}
+    <tr>
+    {% endif %}
+        <td>{{ value }}</td>
+    {% endfor %}
+</table>
+
+</body>
+</html>
